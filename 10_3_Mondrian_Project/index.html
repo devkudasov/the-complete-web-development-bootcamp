@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mondrian Project</title>
-  <style>
-    /* 
-    Write your CSS here 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mondrian Project</title>
+    <style>
+      /* 
     Gap Colour: #000
     White: #F0F1EC
     Red: #E72F24
@@ -19,11 +17,69 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
-  </style>
-</head>
+      body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
 
-<body>
-  <!-- Write your HTML here -->
-</body>
+      .container {
+        display: grid;
+        grid-template-columns: auto 198px 153px 50px;
+        grid-template-rows: 414px 140px auto 20px;
+        width: 748px;
+        height: 748px;
+        gap: 9px;
+        background-color: #000;
+      }
 
+      .container > .item.red {
+        background-color: #e72f24;
+      }
+      .container > .item.second {
+        grid-column: span 3;
+      }
+
+      .container > .item.white {
+        background-color: #f0f1ec;
+      }
+      .container > .item.third {
+        grid-row: span 2;
+      }
+      .container > .item.fourth {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .container > .item.sixth {
+        grid-row: span 2;
+      }
+
+      .container > .item.blue {
+        background-color: #004592;
+        border-bottom: 10px solid #000;
+      }
+      .container > .item.yellow {
+        background-color: #f9d01e;
+      }
+      .container > .item.black {
+        background-color: #232629;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item red"></div>
+      <div class="item white second"></div>
+      <div class="item white third"></div>
+      <div class="item white fourth"></div>
+      <div class="item blue"></div>
+      <div class="item white sixth"></div>
+      <div class="item white"></div>
+      <div class="item yellow"></div>
+      <div class="item black"></div>
+    </div>
+  </body>
 </html>
