@@ -3,7 +3,11 @@ console.log($('h1').hasClass('margin-50'));
 
 $('button').text("Don't click me");
 $('button').click(function () {
-  $('h1').css('color', 'purple');
+  $('h1')
+    .css('color', 'purple')
+    .slideUp()
+    .slideDown()
+    .animate({ opacity: 0.5 });
 });
 
 $('a').attr('href', 'https://www.bing.com');
