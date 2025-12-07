@@ -6,10 +6,12 @@ document.querySelectorAll('.drum').forEach((button) => {
 
 function handleClick() {
   playSound(this.textContent);
+  buttonAnimation(this.textContent);
 }
 
 function handleButtonPress(e) {
   playSound(e.key);
+  buttonAnimation(e.key);
 }
 
 function playSound(key) {
@@ -40,4 +42,12 @@ function getSound(key) {
       console.error('Invalid key');
       return '';
   }
+}
+
+function buttonAnimation(key) {
+  const activeButton = document.querySelector(`.${key}`);
+  activeButton.classList.add('pressed');
+  setTimeout(() => {
+    activeButton.classList.remove('pressed');
+  }, 100);
 }
