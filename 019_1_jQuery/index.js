@@ -2,3 +2,5 @@ $('h1').addClass('big-title margin-50');
 console.log($('h1').hasClass('margin-50'));
 
 $('button').text("Don't click me");
+
+$('a').attr('href', 'https://www.bing.com');
