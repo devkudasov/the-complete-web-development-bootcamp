@@ -5,6 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start1": "node index1.js",
+    "dev1": "nodemon index1.js",
+    "start2": "node index2.js",
+    "dev2": "nodemon index2.js",
+    "start3": "node index3.js",
+    "dev3": "nodemon index3.js",
+    "start4": "node index4.js",
+    "dev4": "nodemon index4.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +21,7 @@
   "dependencies": {
     "body-parser": "^2.2.1",
     "express": "^5.2.1",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.11"
   }
 }
