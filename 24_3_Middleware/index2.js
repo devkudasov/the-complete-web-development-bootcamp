@@ -4,7 +4,7 @@ import morgan from 'morgan';
 const app = express();
 const port = 3000;
 
-app.use(logger);
+app.use(morgan('dev'));
 
 app.get('/', (req, res) => {
   console.log('Hello');
@@ -14,8 +14,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-function logger(req, res, next) {
-  console.log(`${req.method} | ${req.url} | ${new Date().toISOString()}`);
-  next();
-}
