@@ -10,7 +10,7 @@ app.set('views', path.join(import.meta.dirname, 'views'));
 
 app.get('/', (req, res) => {
   const day = new Date().getDay();
-  const isWeekday = day >= 0 && day <= 4;
+  const isWeekday = day === 0 || day === 6;
   res.render('index', { isWeekday: isWeekday });
 });
 
